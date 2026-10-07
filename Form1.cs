@@ -25,10 +25,6 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
         /*Otra nota: object sender es una referencia del control que provocó el evento
          sender es el que disparó la acción en específico (un botón o lo que sea) y se pone Object en referencia a cualquiera de los objetos,
         ya sea un botón, un ComboBox o lo que sea, es genérico (así lo entendí).*/
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            // No sé exactamente que hacer aquí, luego le pregunto al profe
-        }
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -47,11 +43,6 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
 
         }
 
-        private void cbEquipo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // Aquí realmente no sucede nada cuando lo accionas, todo lo hace la categoria
-        }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // Aqui ponemos otra condicional para asegurarse de que elija algo en ambos ComboBox
@@ -62,7 +53,7 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
                 string equipoTexto = cbEquipo.Text;
 
                 // Aquí se añade la fila al DataTable, se actualiza sola por el Databinding
-                tablaDatos.Rows.Add(categoriaTexto,  equipoTexto);
+                tablaDatos.Rows.Add(categoriaTexto, equipoTexto);
             }
         }
 
@@ -71,7 +62,7 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
         // 1. CargarGrilla (tabla). La idea es poner las dos columnas 
         private void CargarGrilla()
         {
-            tablaDatos.Columns.Add("Categorías",  typeof(string));
+            tablaDatos.Columns.Add("Categorías", typeof(string));
             tablaDatos.Columns.Add("Equipos", typeof(string));
 
             /*Este es el famoso DataBinding. Pense que era otra línea de código
@@ -118,7 +109,8 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
             // IMPORTANTE: En C# se usa 'is' en la condicional que quiero agregar
             // "Si el valor seleccionado en el cbCategoria es(is) int (entero) idCategora, entonces... (switch case)
 
-            if (cbCategoria.SelectedValue is int idCategoria) {
+            if (cbCategoria.SelectedValue is int idCategoria)
+            {
 
                 switch (idCategoria)
                 {
@@ -145,6 +137,6 @@ namespace DAD_UT1_TareaFormDataTable_IntentoUno
             cbEquipo.ValueMember = "IdEquipos";
             cbEquipo.DataSource = dtEquipos;
         }
-        
+
     }
 }

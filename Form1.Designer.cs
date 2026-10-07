@@ -38,7 +38,7 @@
             // btnAdd
             // 
             btnAdd.BackColor = SystemColors.ActiveCaption;
-            btnAdd.Location = new Point(533, 95);
+            btnAdd.Location = new Point(523, 242);
             btnAdd.Name = "btnAdd";
             btnAdd.Size = new Size(94, 29);
             btnAdd.TabIndex = 1;
@@ -49,7 +49,7 @@
             // cbCategoria
             // 
             cbCategoria.FormattingEnabled = true;
-            cbCategoria.Location = new Point(169, 96);
+            cbCategoria.Location = new Point(500, 66);
             cbCategoria.Name = "cbCategoria";
             cbCategoria.Size = new Size(151, 28);
             cbCategoria.TabIndex = 2;
@@ -59,27 +59,28 @@
             // cbEquipo
             // 
             cbEquipo.FormattingEnabled = true;
-            cbEquipo.Location = new Point(344, 96);
+            cbEquipo.Location = new Point(500, 152);
             cbEquipo.Name = "cbEquipo";
             cbEquipo.Size = new Size(151, 28);
             cbEquipo.TabIndex = 3;
             cbEquipo.Text = "Equipo";
-            cbEquipo.SelectedIndexChanged += cbEquipo_SelectedIndexChanged;
             // 
             // dgvTabla
             // 
+            dgvTabla.BackgroundColor = SystemColors.GradientActiveCaption;
             dgvTabla.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvTabla.Location = new Point(169, 195);
+            dgvTabla.GridColor = SystemColors.InactiveCaption;
+            dgvTabla.Location = new Point(12, 12);
             dgvTabla.Name = "dgvTabla";
             dgvTabla.RowHeadersWidth = 51;
-            dgvTabla.Size = new Size(326, 226);
+            dgvTabla.Size = new Size(373, 426);
             dgvTabla.TabIndex = 0;
-            dgvTabla.CellContentClick += dataGridView1_CellContentClick;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = SystemColors.GradientActiveCaption;
             ClientSize = new Size(800, 450);
             Controls.Add(cbEquipo);
             Controls.Add(cbCategoria);
